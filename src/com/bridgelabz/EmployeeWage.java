@@ -23,5 +23,7 @@ public class EmployeeWage {
                 System.out.println("Employee is absent");
         }
         System.out.println("Employee total wage is: " +DAILYWAGE);
+
     }
 }
+
