@@ -6,25 +6,30 @@ public class EmployeeWage {
         int WAGEPERHOUR = 20;
         int FULLTIMEHOUR = 8;
         int PARTTIMEHOUR = 4;
-        int DAILYWAGE = 0;
+        int TOTALWORKINGDAYS = 0;
+        int TOTALHOUR = 0;
+        int TOTALDAILYWAGE = 0;
 
 
-        for (int day = 0; day <= WAGEPERHOUR; day++) {
+        while (TOTALHOUR < 80 && TOTALWORKINGDAYS < 20) {
             int employeeCheck = (int) (Math.random() * ((2 + 0) + 1));
+            TOTALWORKINGDAYS ++;
 
             switch (employeeCheck) {
                 case 2:
-                    DAILYWAGE = FULLTIMEHOUR * WAGEPERHOUR;
+                    TOTALDAILYWAGE = FULLTIMEHOUR * WAGEPERHOUR;
                     System.out.println("Employee is present full time");
                     break;
                 case 1:
-                    DAILYWAGE = PARTTIMEHOUR * WAGEPERHOUR;
+                    TOTALDAILYWAGE = PARTTIMEHOUR * WAGEPERHOUR;
                     System.out.println("Employee is present half time");
                     break;
                 default:
-                    System.out.println("Employee is absent");
+                    System.out.println("Employee is absent" +TOTALDAILYWAGE);
             }
-            System.out.println("Employee total wage is: " + DAILYWAGE);
+            System.out.println("Working Days is: " +TOTALDAILYWAGE+ " Hours: " +TOTALHOUR);
+        }
+        System.out.println("Employee total wage for month is: " +TOTALDAILYWAGE);
+
         }
     }
-}
