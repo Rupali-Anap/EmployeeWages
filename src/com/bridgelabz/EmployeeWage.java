@@ -32,4 +32,8 @@ public class EmployeeWage {
         System.out.println("Employee total wage for month is: " +TOTALDAILYWAGE);
 
         }
-    }
+
+        System.out.println("Employee total wage is: " +DAILYWAGE);
+     }
+}
+
